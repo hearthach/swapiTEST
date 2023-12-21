@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "514d40f6-b746-4f8e-a7f0-af72aa645d30",
+		"name": "swapi-rimac",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23720049"
+	},
+	"item": [
+		{
+			"name": "insertPeople",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Luke Skywalker\",\r\n    \"height\": \"172\",\r\n    \"mass\": \"77\",\r\n    \"hair_color\": \"blond\",\r\n    \"skin_color\": \"fair\",\r\n    \"eye_color\": \"blue\",\r\n    \"birth_year\": \"19BBY\",\r\n    \"gender\": \"male\",\r\n    \"homeworld\": \"https://swapi.py4e.com/api/planets/1/\",\r\n    \"created\": \"2014-12-09T13:50:51.644000Z\",\r\n    \"edited\": \"2014-12-20T21:17:56.891000Z\",\r\n    \"url\": \"https://swapi.py4e.com/api/people/1/\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeople-local",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSwapi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/swapi/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"swapi",
+						"people"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,3 @@
-// functions/getAllSwapiPeople/handler.js
-
 const swapiService = require('../../services/swapiService');
 
 module.exports.getAllSwapiPeople = async () => {

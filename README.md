@@ -4,7 +4,7 @@
 Este proyecto es una API desarrollada con Node.js y el framework Serverless. Está diseñada para interactuar con la API SWAPI (Star Wars API), permitiendo realizar operaciones específicas y almacenar información en una base de datos MySQL. Incluye endpoints para obtener y agregar personajes de Star Wars, con una adaptación de los modelos de datos al español.
 
 ### Instalación
-## Pre-requisitos
+### Pre-requisitos
 
 Node.js (versión 12.x o superior)
 npm (incluido con Node.js)
@@ -95,5 +95,8 @@ Para desplegar la aplicación en AWS, asegúrate de tener configurado AWS CLI y 
 
 ## Documentación de API
 La documentación de Swagger está disponible en /docs cuando la API se ejecuta localmente.
+
+## Pruebas POSTMAN
+Se puede utilizar postman para realizar pruebas. se adjunta colección.
 
 

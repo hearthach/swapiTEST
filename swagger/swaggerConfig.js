@@ -11,12 +11,11 @@ const swaggerDefinition = {
         description: 'Servidor de desarrollo local',
       },
     ],
-    // Puedes agregar más configuraciones aquí
   };
   
   const options = {
     swaggerDefinition,
-    apis: ['./swagger/swaggerDocs.js'], // Actualiza la ruta al archivo swaggerDocs.js
+    apis: ['./swagger/swaggerDocs.js'],
   };
   
   const swaggerSpec = require('swagger-jsdoc')(options);

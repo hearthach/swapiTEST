@@ -1,13 +1,12 @@
-// tests/peopleTest.js
 const PeopleModel = require("../models/peopleModel");
 const databaseService = require("../services/databaseService");
 
-// Simulando databaseService.executeQuery
+// para simular databaseService.executeQuery
 jest.mock("../services/databaseService", () => ({
   executeQuery: jest.fn(),
 }));
 
-// Simular PeopleModel.convertToMySQLDateTime
+// sirve para simular PeopleModel.convertToMySQLDateTime
 PeopleModel.convertToMySQLDateTime = jest
   .fn()
   .mockImplementation((dateTime) => {
@@ -65,19 +64,15 @@ describe("PeopleModel Tests", () => {
       skin_color: "light",
       url: "https://swapi.dev/api/people/5",
       created: new Date().toISOString(),
-      edited: new Date().toISOString()
+      edited: new Date().toISOString(),
     };
 
     databaseService.executeQuery.mockResolvedValueOnce({ insertId: 1 });
 
     await PeopleModel.addPerson(newPerson);
 
-    // Verifica que convertToMySQLDateTime se haya llamado dos veces (para 'created' y 'edited')
     expect(PeopleModel.convertToMySQLDateTime).toHaveBeenCalledTimes(2);
 
-    // Verifica que executeQuery se llame
     expect(databaseService.executeQuery).toHaveBeenCalled();
   });
-
-  // Aquí puedes agregar más pruebas según sea necesario
 });
