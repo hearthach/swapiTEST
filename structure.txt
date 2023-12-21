@@ -1,0 +1,35 @@
+swapi-rimac-v1/
+│
+├── functions/
+│   ├── getAllSwapiPeople/          # Función para manejar GET requests ALL-SWAPI
+│   │   └── handler.js
+│   ├── getPeople/          # Función para manejar GET requests
+│   │   └── handler.js
+│   ├── getSwapiPerson/          # Función para manejar GET requests SWAPI-Person
+│   │   └── handler.js
+│   └── postPeople/         # Función para manejar POST requests
+│       └── handler.js
+│
+├── models/
+│   └── peopleModel.js      # Modelo de datos para la entidad People
+│
+├── services/
+│   ├── swapiService.js     # Servicio para interactuar con la API SWAPI
+│   └── databaseService.js  # Servicio para manejar operaciones de la base de datos
+│
+├── utils/
+│   ├── traductor.js        # Utilidad para traducir atributos
+│   └── dataMapper.js       # Mapeador de datos para transformaciones
+│
+├── tests/
+│   └── peopleTest.js       # Pruebas unitarias y de integración
+│
+├── swagger/                 # Nueva carpeta para la configuración de Swagger
+│   ├── swaggerConfig.js     # Configuración de Swagger
+│   └── swaggerDocs.js       # Documentación Swagger (para separar la configuración de la documentación)
+├── node_modules/
+│
+├── .env                    # Archivo para variables de entorno
+├── README.md               # Documentacioón de archivos
+├── package.json            # Dependencias y scripts de npm
+└── serverless.yml          # Configuración de despliegue serverless

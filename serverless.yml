@@ -1,0 +1,49 @@
+service: swapi-rimac-v1
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  # Define las variables de entorno para la conexión a la base de datos MySQL
+  environment:
+    DB_HOST: ${env:DB_HOST, '127.0.0.1'}
+    DB_USER: ${env:DB_USER, 'root'}
+    DB_PASSWORD: ${env:DB_PASSWORD, ''}
+    DB_DATABASE: ${env:DB_DATABASE, 'swapirimac'}
+
+functions:
+  getSwapiPerson:
+      handler: functions/getSwapiPerson/handler.getSwapiPerson
+      events:
+        - http:
+            path: swapi/people/{id}
+            method: get
+            cors: true
+  getAllSwapiPeople:
+    handler: functions/getAllSwapiPeople/handler.getAllSwapiPeople
+    events:
+      - http:
+          path: swapi/people
+          method: get
+          cors: true
+  postPerson:
+    handler: functions/postPeople/handler.postPerson
+    events:
+      - http:
+          path: people
+          method: post
+          cors: true
+
+  getPeople:
+    handler: functions/getPeople/handler.getPeople
+    events:
+      - http:
+          path: people
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
+
+# ... otros recursos y configuraciones ...
