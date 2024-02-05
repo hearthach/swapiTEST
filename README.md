@@ -1,4 +1,4 @@
-## SWAPI Rimac API
+## SWAPI API - JestTEST
 ## Descripción del Proyecto
 
 Este proyecto es una API desarrollada con Node.js y el framework Serverless. Está diseñada para interactuar con la API SWAPI (Star Wars API), permitiendo realizar operaciones específicas y almacenar información en una base de datos MySQL. Incluye endpoints para obtener y agregar personajes de Star Wars, con una adaptación de los modelos de datos al español.
