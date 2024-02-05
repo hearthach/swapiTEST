@@ -61,7 +61,7 @@ Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 ```bash
 npm install aws-sdk mysql2 axios dotenv
 npm install --save-dev jest supertest eslint prettier
-npm install swagger-ui-express swagger-jsdoc --save 
+npm install swagger-ui-express swagger-jsdoc --save
 ```
 
 ## Ejecución

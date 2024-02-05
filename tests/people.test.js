@@ -36,7 +36,7 @@ describe("PeopleModel Tests", () => {
     expect(result).toEqual(mockPerson);
   });
 
-  test("Prueba unitaria para getAllPeople", async () => {
+  test("Prueba Unitaria J-TEST para getAllPeople", async () => {
     const mockPeople = [
       { id: 1, nombre: "Luke Skywalker" },
       { id: 2, nombre: "Darth Vader" },
@@ -51,7 +51,7 @@ describe("PeopleModel Tests", () => {
     expect(result).toEqual(mockPeople);
   });
 
-  test("Prueba unitaria para addPerson", async () => {
+  test("Prueba Unitari J-TEST para addPerson", async () => {
     const newPerson = {
       name: "Leia Organa",
       birth_year: "19BBY",
